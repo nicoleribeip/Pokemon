@@ -1,5 +1,12 @@
 import React from "react";
-import { Nome, Container, Corpo, DivRoxa, ImagemPersonagem } from "./styled";
+import {
+  Nome,
+  Container,
+  Corpo,
+  ImagemPersonagem,
+  NumIndex,
+  Poktitle,
+} from "./styled";
 
 function Card({ id, nomePokemon }) {
   console.log(id);
@@ -10,7 +17,11 @@ function Card({ id, nomePokemon }) {
           src={`https://pokeres.bastionbot.org/images/pokemon/${id + 1}.png`}
         ></ImagemPersonagem>
       </Corpo>
-      <Nome>{nomePokemon}</Nome>
+      <NumIndex>#{id}</NumIndex>
+      <Nome>
+        <Poktitle>Pokemon:</Poktitle>
+        {nomePokemon}
+      </Nome>
     </Container>
   );
 }

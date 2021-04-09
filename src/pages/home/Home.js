@@ -39,8 +39,8 @@ function Home() {
   return (
     <Container>
       {pokes &&
-        pokes.map((cleitin, index) => (
-          <Card id={index} nomePokemon={cleitin.name} />
+        pokes.map((pokemonname, index) => (
+          <Card id={index} nomePokemon={pokemonname.name} />
         ))}
     </Container>
   );
